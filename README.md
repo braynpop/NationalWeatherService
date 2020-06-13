@@ -4,9 +4,9 @@ National Weather Service
 This is client for the National Weather Service API and this will get the forecast for particular location based on co-ordinates for 5 days.
 
 1. Clone repository and navigate to NationalWeatherService folder.
-  ``` bash
+    ``` bash
     git clone https://github.com/braynpop/NationalWeatherService.git
-  ```
+   ```
 2. Run the below command to build the jar with dependencies 
     ``` bash
    mvn package
