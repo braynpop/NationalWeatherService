@@ -4,14 +4,17 @@ National Weather Service
 This is client for the National Weather Service API and this will get the forecast for particular location based on co-ordinates for 5 days.
 
 1. Clone repository and navigate to NationalWeatherService folder.
-   git clone https://github.com/braynpop/NationalWeatherService.git
-  
+  ``` bash
+    git clone https://github.com/braynpop/NationalWeatherService.git
+  ```
 2. Run the below command to build the jar with dependencies 
+    ``` bash
    mvn package
-   
+   ```
 3. Run below java command and provide the require arguments.
+ ```bash  
    java -jar com.nws.forecast-0.0.1-SNAPSHOT-jar-with-dependencies.jar 
- 
+ ```
  Enter latitude, longitude
   ``` bash
   39.7456, -97.0892
