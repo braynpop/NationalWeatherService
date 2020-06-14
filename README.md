@@ -1,7 +1,7 @@
 # NationalWeatherService
 National Weather Service
 
-This is client for the National Weather Service API and this will get the forecast for particular location based on co-ordinates for 5 days.
+This is client for the National Weather Service API and this will get the forecast for particular location based on coordinates for 5 days.
 
 1. Clone repository and navigate to NationalWeatherService folder.
     ``` bash
