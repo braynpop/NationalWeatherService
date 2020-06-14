@@ -1,5 +1,5 @@
-# NationalWeatherService
-National Weather Service
+# National Weather Service
+
 
 This is client for the National Weather Service API and this will get the forecast for particular location based on coordinates for 5 days.
 
@@ -13,7 +13,7 @@ This is client for the National Weather Service API and this will get the foreca
    ```
 3. Run below java command and provide the require arguments.
    ```bash  
-     java -jar com.nws.forecast-0.0.1-SNAPSHOT-jar-with-dependencies.jar 
+   java -jar com.nws.forecast-0.0.1-SNAPSHOT-jar-with-dependencies.jar 
    ```
      Enter latitude, longitude
       ``` bash
