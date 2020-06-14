@@ -37,7 +37,7 @@ public class ForecastDetail {
 	@Override
     public String toString() 
     { 
-        return "{" + fDate + ": " + forecast + "}"; 
+        return "[" + fDate + ": " + forecast + "]"; 
     } 
 
 }
