@@ -25,10 +25,9 @@ public class ForecastClient {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("https://api.weather.gov/points/").path(latitude + "," + longitude);
 		Response resp = target.request(MediaType.APPLICATION_JSON_TYPE).header("UserAgent", "TMEPL").get();
-		System.out.println("status:" + resp.getStatus() + "/n message:" + resp.getStatusInfo());
 		if(resp.getStatus()!=200) {
-			System.out.println("Please enter valid latitude and longitude values");
-			throw new NotFoundException("unable to process the request, please check inputs");
+			throw new NotFoundException("status:" + resp.getStatus() + "\nmessage:" + resp.getStatusInfo() + 
+					"\nerror details:unable to process the request, Please enter valid latitude and longitude values");
 		}
 		JsonObject gridPoints = resp.readEntity(JsonObject.class);
 		
@@ -47,7 +46,8 @@ public class ForecastClient {
 		Response resp = target.request(MediaType.APPLICATION_JSON_TYPE).header("UserAgent", "TMEPL").get();
 		System.out.println("status:" + resp.getStatus() + "/n message:" + resp.getStatusInfo());
 		if(resp.getStatus()!=200) {
-			System.out.println("Error while trying to get forecast from Gridpoints");
+			throw new NotFoundException("status:" + resp.getStatus() + "\nmessage:" + resp.getStatusInfo() + 
+					"\nerror details:unable to process the request.");
 		}
 		JsonObject forecastResponse = resp.readEntity(JsonObject.class);
 		JsonArray forecast = forecastResponse.getJsonObject("properties").getJsonArray("periods");
